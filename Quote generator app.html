@@ -1,439 +1,438 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2821
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Motivation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-\f0\fs24 \cf0 <!DOCTYPE html>\
-<html lang="en">\
-<head>\
-    <meta charset="UTF-8">\
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
-    <title>Daily Motivation</title>\
-    <style>\
-        * \{\
-            margin: 0;\
-            padding: 0;\
-            box-sizing: border-box;\
-        \}\
-\
-        body \{\
-            font-family: 'Arial', sans-serif;\
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\
-            min-height: 100vh;\
-            display: flex;\
-            align-items: center;\
-            justify-content: center;\
-            padding: 20px;\
-            overflow-x: hidden;\
-        \}\
-\
-        .app-container \{\
-            background: rgba(255, 255, 255, 0.95);\
-            backdrop-filter: blur(20px);\
-            border-radius: 20px;\
-            padding: 40px;\
-            max-width: 600px;\
-            width: 100%;\
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);\
-            border: 1px solid rgba(255, 255, 255, 0.2);\
-            text-align: center;\
-            position: relative;\
-            overflow: hidden;\
-            animation: slideIn 0.8s ease-out;\
-        \}\
-\
-        .app-container::before \{\
-            content: '';\
-            position: absolute;\
-            top: -50%;\
-            left: -50%;\
-            width: 200%;\
-            height: 200%;\
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);\
-            transform: rotate(45deg);\
-            animation: shimmer 3s infinite;\
-        \}\
-\
-        @keyframes slideIn \{\
-            from \{\
-                opacity: 0;\
-                transform: translateY(30px);\
-            \}\
-            to \{\
-                opacity: 1;\
-                transform: translateY(0);\
-            \}\
-        \}\
-\
-        @keyframes shimmer \{\
-            0% \{ transform: translateX(-100%) rotate(45deg); \}\
-            100% \{ transform: translateX(100%) rotate(45deg); \}\
-        \}\
-\
-        .header \{\
-            margin-bottom: 30px;\
-            position: relative;\
-            z-index: 1;\
-        \}\
-\
-        .title \{\
-            font-size: 2.5rem;\
-            font-weight: bold;\
-            background: linear-gradient(135deg, #667eea, #764ba2);\
-            -webkit-background-clip: text;\
-            -webkit-text-fill-color: transparent;\
-            background-clip: text;\
-            margin-bottom: 10px;\
-            animation: glow 2s ease-in-out infinite alternate;\
-        \}\
-\
-        @keyframes glow \{\
-            from \{ filter: brightness(1); \}\
-            to \{ filter: brightness(1.2); \}\
-        \}\
-\
-        .subtitle \{\
-            color: #666;\
-            font-size: 1.1rem;\
-            font-weight: 300;\
-        \}\
-\
-        .quote-container \{\
-            position: relative;\
-            z-index: 1;\
-            margin: 40px 0;\
-            padding: 30px;\
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));\
-            border-radius: 15px;\
-            border: 1px solid rgba(102, 126, 234, 0.2);\
-            transition: all 0.5s ease;\
-        \}\
-\
-        .quote-container:hover \{\
-            transform: translateY(-2px);\
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.15);\
-        \}\
-\
-        .quote-text \{\
-            font-size: 1.4rem;\
-            line-height: 1.6;\
-            color: #333;\
-            margin-bottom: 20px;\
-            font-style: italic;\
-            animation: fadeInUp 0.6s ease-out 0.2s both;\
-        \}\
-\
-        .quote-author \{\
-            font-size: 1.1rem;\
-            color: #667eea;\
-            font-weight: 600;\
-            animation: fadeInUp 0.6s ease-out 0.4s both;\
-        \}\
-\
-        @keyframes fadeInUp \{\
-            from \{\
-                opacity: 0;\
-                transform: translateY(20px);\
-            \}\
-            to \{\
-                opacity: 1;\
-                transform: translateY(0);\
-            \}\
-        \}\
-\
-        .date-display \{\
-            background: linear-gradient(135deg, #667eea, #764ba2);\
-            color: white;\
-            padding: 12px 24px;\
-            border-radius: 25px;\
-            font-weight: 600;\
-            margin-bottom: 30px;\
-            display: inline-block;\
-            position: relative;\
-            z-index: 1;\
-            animation: pulse 2s infinite;\
-        \}\
-\
-        @keyframes pulse \{\
-            0%, 100% \{ transform: scale(1); \}\
-            50% \{ transform: scale(1.05); \}\
-        \}\
-\
-        .new-quote-btn \{\
-            background: linear-gradient(135deg, #667eea, #764ba2);\
-            color: white;\
-            border: none;\
-            padding: 15px 30px;\
-            font-size: 1.1rem;\
-            font-weight: 600;\
-            border-radius: 50px;\
-            cursor: pointer;\
-            transition: all 0.3s ease;\
-            position: relative;\
-            z-index: 1;\
-            overflow: hidden;\
-        \}\
-\
-        .new-quote-btn:hover \{\
-            transform: translateY(-2px);\
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);\
-        \}\
-\
-        .new-quote-btn:active \{\
-            transform: translateY(0);\
-        \}\
-\
-        .floating-elements \{\
-            position: absolute;\
-            top: 0;\
-            left: 0;\
-            width: 100%;\
-            height: 100%;\
-            pointer-events: none;\
-            overflow: hidden;\
-        \}\
-\
-        .floating-circle \{\
-            position: absolute;\
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));\
-            border-radius: 50%;\
-            animation: float 6s ease-in-out infinite;\
-        \}\
-\
-        .floating-circle:nth-child(1) \{\
-            width: 60px;\
-            height: 60px;\
-            top: 10%;\
-            left: 10%;\
-            animation-delay: 0s;\
-        \}\
-\
-        .floating-circle:nth-child(2) \{\
-            width: 40px;\
-            height: 40px;\
-            top: 20%;\
-            right: 15%;\
-            animation-delay: 2s;\
-        \}\
-\
-        .floating-circle:nth-child(3) \{\
-            width: 80px;\
-            height: 80px;\
-            bottom: 15%;\
-            left: 15%;\
-            animation-delay: 4s;\
-        \}\
-\
-        @keyframes float \{\
-            0%, 100% \{ transform: translateY(0px) rotate(0deg); \}\
-            50% \{ transform: translateY(-20px) rotate(180deg); \}\
-        \}\
-\
-        @media (max-width: 768px) \{\
-            .app-container \{\
-                padding: 30px 20px;\
-                margin: 10px;\
-            \}\
-            \
-            .title \{\
-                font-size: 2rem;\
-            \}\
-            \
-            .quote-text \{\
-                font-size: 1.2rem;\
-            \}\
-        \}\
-    </style>\
-</head>\
-<body>\
-    <div class="app-container">\
-        <div class="floating-elements">\
-            <div class="floating-circle"></div>\
-            <div class="floating-circle"></div>\
-            <div class="floating-circle"></div>\
-        </div>\
-        \
-        <div class="header">\
-            <h1 class="title">Daily Motivation</h1>\
-            <p class="subtitle">Your daily dose of inspiration</p>\
-        </div>\
-        \
-        <div class="date-display" id="currentDate"></div>\
-        \
-        <div class="quote-container" id="quoteContainer">\
-            <div class="quote-text" id="quoteText"></div>\
-            <div class="quote-author" id="quoteAuthor"></div>\
-        </div>\
-        \
-        <button class="new-quote-btn" onclick="generateNewQuote()">\
-            \uc0\u10024  New Quote\
-        </button>\
-    </div>\
-\
-    <script>\
-        const quotes = [\
-            \{\
-                text: "The only way to do great work is to love what you do.",\
-                author: "Steve Jobs"\
-            \},\
-            \{\
-                text: "Life is what happens to you while you're busy making other plans.",\
-                author: "John Lennon"\
-            \},\
-            \{\
-                text: "The future belongs to those who believe in the beauty of their dreams.",\
-                author: "Eleanor Roosevelt"\
-            \},\
-            \{\
-                text: "It is during our darkest moments that we must focus to see the light.",\
-                author: "Aristotle"\
-            \},\
-            \{\
-                text: "Success is not final, failure is not fatal: it is the courage to continue that counts.",\
-                author: "Winston Churchill"\
-            \},\
-            \{\
-                text: "The only impossible journey is the one you never begin.",\
-                author: "Tony Robbins"\
-            \},\
-            \{\
-                text: "In the middle of difficulty lies opportunity.",\
-                author: "Albert Einstein"\
-            \},\
-            \{\
-                text: "Believe you can and you're halfway there.",\
-                author: "Theodore Roosevelt"\
-            \},\
-            \{\
-                text: "The best time to plant a tree was 20 years ago. The second best time is now.",\
-                author: "Chinese Proverb"\
-            \},\
-            \{\
-                text: "Your limitation is only your imagination.",\
-                author: "Unknown"\
-            \},\
-            \{\
-                text: "Great things never come from comfort zones.",\
-                author: "Neil Strauss"\
-            \},\
-            \{\
-                text: "Dream it. Wish it. Do it.",\
-                author: "Unknown"\
-            \},\
-            \{\
-                text: "Success doesn't just find you. You have to go out and get it.",\
-                author: "Unknown"\
-            \},\
-            \{\
-                text: "The harder you work for something, the greater you'll feel when you achieve it.",\
-                author: "Unknown"\
-            \},\
-            \{\
-                text: "Don't stop when you're tired. Stop when you're done.",\
-                author: "Unknown"\
-            \},\
-            \{\
-                text: "Wake up with determination. Go to bed with satisfaction.",\
-                author: "Unknown"\
-            \},\
-            \{\
-                text: "Do something today that your future self will thank you for.",\
-                author: "Sean Patrick Flanery"\
-            \},\
-            \{\
-                text: "Little things make big days.",\
-                author: "Unknown"\
-            \},\
-            \{\
-                text: "It's going to be hard, but hard does not mean impossible.",\
-                author: "Unknown"\
-            \},\
-            \{\
-                text: "Don't wait for opportunity. Create it.",\
-                author: "Unknown"\
-            \},\
-            \{\
-                text: "The way to get started is to quit talking and begin doing.",\
-                author: "Walt Disney"\
-            \},\
-            \{\
-                text: "If you really look closely, most overnight successes took a long time.",\
-                author: "Steve Jobs"\
-            \},\
-            \{\
-                text: "The secret of getting ahead is getting started.",\
-                author: "Mark Twain"\
-            \},\
-            \{\
-                text: "Don't be afraid to give yourself everything you've ever wanted in life.",\
-                author: "Unknown"\
-            \},\
-            \{\
-                text: "What lies behind us and what lies before us are tiny matters compared to what lies within us.",\
-                author: "Ralph Waldo Emerson"\
-            \}\
-        ];\
-\
-        let currentQuoteIndex = -1;\
-        let displayedToday = false;\
-\
-        function formatDate() \{\
-            const options = \{ \
-                weekday: 'long', \
-                year: 'numeric', \
-                month: 'long', \
-                day: 'numeric' \
-            \};\
-            return new Date().toLocaleDateString('en-US', options);\
-        \}\
-\
-        function getTodaysQuote() \{\
-            const today = new Date();\
-            const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));\
-            return quotes[dayOfYear % quotes.length];\
-        \}\
-\
-        function displayQuote(quote, isNewQuote = false) \{\
-            const quoteContainer = document.getElementById('quoteContainer');\
-            const quoteText = document.getElementById('quoteText');\
-            const quoteAuthor = document.getElementById('quoteAuthor');\
-            \
-            if (isNewQuote) \{\
-                quoteContainer.style.animation = 'none';\
-                quoteContainer.offsetHeight; // Trigger reflow\
-                quoteContainer.style.animation = null;\
-            \}\
-            \
-            quoteText.textContent = `"$\{quote.text\}"`;\
-            quoteAuthor.textContent = `\'97 $\{quote.author\}`;\
-        \}\
-\
-        function generateNewQuote() \{\
-            let newIndex;\
-            do \{\
-                newIndex = Math.floor(Math.random() * quotes.length);\
-            \} while (newIndex === currentQuoteIndex && quotes.length > 1);\
-            \
-            currentQuoteIndex = newIndex;\
-            displayQuote(quotes[newIndex], true);\
-            displayedToday = false;\
-        \}\
-\
-        function initializeApp() \{\
-            document.getElementById('currentDate').textContent = formatDate();\
-            \
-            if (!displayedToday) \{\
-                const todaysQuote = getTodaysQuote();\
-                currentQuoteIndex = quotes.indexOf(todaysQuote);\
-                displayQuote(todaysQuote);\
-                displayedToday = true;\
-            \}\
-        \}\
-\
-        // Initialize the app when the page loads\
-        window.addEventListener('load', initializeApp);\
-    </script>\
-</body>\
-</html>}
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .app-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: slideIn 0.8s ease-out;
+        }
+
+        .app-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+
+        .header {
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: brightness(1); }
+            to { filter: brightness(1.2); }
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        .quote-container {
+            position: relative;
+            z-index: 1;
+            margin: 40px 0;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            border-radius: 15px;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            transition: all 0.5s ease;
+        }
+
+        .quote-container:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.15);
+        }
+
+        .quote-text {
+            font-size: 1.4rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+            font-style: italic;
+            animation: fadeInUp 0.6s ease-out 0.2s both;
+        }
+
+        .quote-author {
+            font-size: 1.1rem;
+            color: #667eea;
+            font-weight: 600;
+            animation: fadeInUp 0.6s ease-out 0.4s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .date-display {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .new-quote-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .new-quote-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .new-quote-btn:active {
+            transform: translateY(0);
+        }
+
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .floating-circle {
+            position: absolute;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-circle:nth-child(1) {
+            width: 60px;
+            height: 60px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-circle:nth-child(2) {
+            width: 40px;
+            height: 40px;
+            top: 20%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .floating-circle:nth-child(3) {
+            width: 80px;
+            height: 80px;
+            bottom: 15%;
+            left: 15%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        @media (max-width: 768px) {
+            .app-container {
+                padding: 30px 20px;
+                margin: 10px;
+            }
+            
+            .title {
+                font-size: 2rem;
+            }
+            
+            .quote-text {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <div class="floating-elements">
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
+        </div>
+        
+        <div class="header">
+            <h1 class="title">Daily Motivation</h1>
+            <p class="subtitle">Your daily dose of inspiration</p>
+        </div>
+        
+        <div class="date-display" id="currentDate"></div>
+        
+        <div class="quote-container" id="quoteContainer">
+            <div class="quote-text" id="quoteText"></div>
+            <div class="quote-author" id="quoteAuthor"></div>
+        </div>
+        
+        <button class="new-quote-btn" onclick="generateNewQuote()">
+            ✨ New Quote
+        </button>
+    </div>
+
+    <script>
+        const quotes = [
+            {
+                text: "The only way to do great work is to love what you do.",
+                author: "Steve Jobs"
+            },
+            {
+                text: "Life is what happens to you while you're busy making other plans.",
+                author: "John Lennon"
+            },
+            {
+                text: "The future belongs to those who believe in the beauty of their dreams.",
+                author: "Eleanor Roosevelt"
+            },
+            {
+                text: "It is during our darkest moments that we must focus to see the light.",
+                author: "Aristotle"
+            },
+            {
+                text: "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+                author: "Winston Churchill"
+            },
+            {
+                text: "The only impossible journey is the one you never begin.",
+                author: "Tony Robbins"
+            },
+            {
+                text: "In the middle of difficulty lies opportunity.",
+                author: "Albert Einstein"
+            },
+            {
+                text: "Believe you can and you're halfway there.",
+                author: "Theodore Roosevelt"
+            },
+            {
+                text: "The best time to plant a tree was 20 years ago. The second best time is now.",
+                author: "Chinese Proverb"
+            },
+            {
+                text: "Your limitation is only your imagination.",
+                author: "Unknown"
+            },
+            {
+                text: "Great things never come from comfort zones.",
+                author: "Neil Strauss"
+            },
+            {
+                text: "Dream it. Wish it. Do it.",
+                author: "Unknown"
+            },
+            {
+                text: "Success doesn't just find you. You have to go out and get it.",
+                author: "Unknown"
+            },
+            {
+                text: "The harder you work for something, the greater you'll feel when you achieve it.",
+                author: "Unknown"
+            },
+            {
+                text: "Don't stop when you're tired. Stop when you're done.",
+                author: "Unknown"
+            },
+            {
+                text: "Wake up with determination. Go to bed with satisfaction.",
+                author: "Unknown"
+            },
+            {
+                text: "Do something today that your future self will thank you for.",
+                author: "Sean Patrick Flanery"
+            },
+            {
+                text: "Little things make big days.",
+                author: "Unknown"
+            },
+            {
+                text: "It's going to be hard, but hard does not mean impossible.",
+                author: "Unknown"
+            },
+            {
+                text: "Don't wait for opportunity. Create it.",
+                author: "Unknown"
+            },
+            {
+                text: "The way to get started is to quit talking and begin doing.",
+                author: "Walt Disney"
+            },
+            {
+                text: "If you really look closely, most overnight successes took a long time.",
+                author: "Steve Jobs"
+            },
+            {
+                text: "The secret of getting ahead is getting started.",
+                author: "Mark Twain"
+            },
+            {
+                text: "Don't be afraid to give yourself everything you've ever wanted in life.",
+                author: "Unknown"
+            },
+            {
+                text: "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
+                author: "Ralph Waldo Emerson"
+            }
+        ];
+
+        let currentQuoteIndex = -1;
+        let displayedToday = false;
+
+        function formatDate() {
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            };
+            return new Date().toLocaleDateString('en-US', options);
+        }
+
+        function getTodaysQuote() {
+            const today = new Date();
+            const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
+            return quotes[dayOfYear % quotes.length];
+        }
+
+        function displayQuote(quote, isNewQuote = false) {
+            const quoteContainer = document.getElementById('quoteContainer');
+            const quoteText = document.getElementById('quoteText');
+            const quoteAuthor = document.getElementById('quoteAuthor');
+            
+            if (isNewQuote) {
+                quoteContainer.style.animation = 'none';
+                quoteContainer.offsetHeight; // Trigger reflow
+                quoteContainer.style.animation = null;
+            }
+            
+            quoteText.textContent = `"${quote.text}"`;
+            quoteAuthor.textContent = `— ${quote.author}`;
+        }
+
+        function generateNewQuote() {
+            let newIndex;
+            do {
+                newIndex = Math.floor(Math.random() * quotes.length);
+            } while (newIndex === currentQuoteIndex && quotes.length > 1);
+            
+            currentQuoteIndex = newIndex;
+            displayQuote(quotes[newIndex], true);
+            displayedToday = false;
+        }
+
+        function initializeApp() {
+            document.getElementById('currentDate').textContent = formatDate();
+            
+            if (!displayedToday) {
+                const todaysQuote = getTodaysQuote();
+                currentQuoteIndex = quotes.indexOf(todaysQuote);
+                displayQuote(todaysQuote);
+                displayedToday = true;
+            }
+        }
+
+        // Initialize the app when the page loads
+        window.addEventListener('load', initializeApp);
+        
+        // Backup initialization in case load event doesn't fire
+        document.addEventListener('DOMContentLoaded', initializeApp);
+        
+        // Final fallback
+        setTimeout(initializeApp, 1000);
+    </script>
+</body>
+</html>
